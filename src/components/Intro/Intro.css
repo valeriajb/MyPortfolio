@@ -1,3 +1,56 @@
 .intro-container{
-    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.intro-left{
+    flex:0.5;
+}
+.img-container{
+    width: 500px;
+    height: 500px;
+    background-color: #dd143d;
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    float: right;
+    overflow:hidden;
+
+}
+.img-person{
+    height:100%;
+}
+.intro-rigth{
+    flex: 0.5;
+    margin: 150px 50px;
+}
+.span-intro{
+    font-size: 35px;
+    font-weight: 600;
+}
+.title-name{
+    font-size:60px;
+    margin: 15px 0;
+}
+.text-ocupation{
+    font-size: 30px;
+    font-weight: 600;
+}
+.span-development{
+    color:#dd143d;
+}
+.next-page{
+    position: absolute;
+    right: 20%;
+    bottom: 35px;
+}
+.img-next{
+    width: 30px;
+    animation: arrowBlink 2s infinite;
+}
+@keyframes arrowBlink {
+    100%{
+        opacity: 0;
+        
+    }
+    
 }
