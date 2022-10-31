@@ -14,7 +14,6 @@
     justify-content: center;
     float: right;
     overflow:hidden;
-
 }
 .img-person{
     height:100%;
@@ -50,7 +49,5 @@
 @keyframes arrowBlink {
     100%{
         opacity: 0;
-        
     }
-    
 }

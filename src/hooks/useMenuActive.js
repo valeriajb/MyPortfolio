@@ -12,12 +12,17 @@ export function useMenuActive() {
     setState(false);
   };
 
-  return { state, setState, changeStateTrue, changeStateFalse };
+   
+  const changeState=()=>{
+    (state===false)?changeStateTrue():changeStateFalse()
+  }
+
+  return { state, setState, changeStateTrue, changeStateFalse, changeState};
 }
 
 export function BarMenuFunction() {
   const stateContext = createContext();
-  const { state, changeStateTrue, changeStateFalse } = useMenuActive();
+  const { state, changeStateTrue, changeStateFalse,changeState } = useMenuActive();
   return (
     <>
       <stateContext.Provider value={state}>
@@ -25,6 +30,7 @@ export function BarMenuFunction() {
           state={state}
           changeStateTrue={changeStateTrue}
           changeStateFalse={changeStateFalse}
+          changeState={changeState}
         />
         <Menu state={state} changeStateFalse={changeStateFalse} />
       </stateContext.Provider>

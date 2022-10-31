@@ -1,11 +1,15 @@
-import React from 'react'
-import '../App.css'
+import React from "react";
+import { BarMenuFunction } from "../hooks/useMenuActive";
+import "../App.css";
 function Knowledges() {
   return (
-    <div id="Resumen" className='section-information'>
+    <>
+      <BarMenuFunction />
+      <div id="Resumen" className="section-information">
         GOLALLA
-    </div>
-  )
+      </div>
+    </>
+  );
 }
 
-export default Knowledges
+export default Knowledges;

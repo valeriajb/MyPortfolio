@@ -10,24 +10,31 @@ function Intro() {
   useEffect(() => {
     init(textRef.current, {
       showCursor: false,
-      strings: [ "Web", "Desktop" ],
+      backSpeed: 60,
+      backDelay: 1500,
+      strings: ["Web", "DeskTop"],
     });
-  });
+  }, []);
 
   return (
     <div className="section-information">
       <div id="Inicio" className="intro-container">
         <div className="intro-left">
           <div className="img-container">
-            <img src={PersonIntro} alt="" className="img-person" />
+            <img
+              src={PersonIntro}
+              alt="Imagen Valeria"
+              className="img-person"
+            />
           </div>
         </div>
         <div className="intro-rigth">
           <span className="span-intro">Hola, soy</span>
           <h1 className="title-name">Valeria Jiménez B</h1>
-          <span className="text-ocupation">
-            Desarrolladora <span ref={textRef} className="span-development"></span>
-          </span>
+          <h3 className="text-ocupation">
+            Desarrolladora{" "}
+            <span className="span-development" ref={textRef}></span>
+          </h3>
           <a href="#" className="next-page">
             <img src={next} alt="" className="img-next" />
           </a>
