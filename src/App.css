@@ -11,9 +11,9 @@ body::-webkit-scrollbar{
     top:70px;
     width: 100vw;
 }
-.section-information > *{
+/* .section-information > *{
     height:calc(100vh - 70px);
-}
+} */
 .section-information::-webkit-scrollbar{
     width: 0;
 }

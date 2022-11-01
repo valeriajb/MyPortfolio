@@ -1,14 +1,12 @@
 import React from "react";
-import { BarMenuFunction } from "../hooks/useMenuActive";
+import { useListHabilities } from "../hooks/useListHabilities";
 import "../App.css";
 function Knowledges() {
+  const { habilities } = useListHabilities();
   return (
-    <>
-      <BarMenuFunction />
       <div id="Resumen" className="section-information">
-        GOLALLA
+        Holaaa
       </div>
-    </>
   );
 }
 
