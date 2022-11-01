@@ -29,7 +29,7 @@ export function useListPortfolio() {
 }
 
 export function useStateList(listPortfolio){
-    const [selected,setSelected]=useState("webApp")
+    const [selected,setSelected]=useState()
     
     return({selected,setSelected,})
 }

@@ -12,9 +12,8 @@ export function useMenuActive() {
     setState(false);
   };
 
-   
   const changeState=()=>{
-    (state===false)?changeStateTrue():changeStateFalse()
+    (state)?changeStateFalse():changeStateTrue()
   }
 
   return { state, setState, changeStateTrue, changeStateFalse, changeState};
@@ -28,8 +27,6 @@ export function BarMenuFunction() {
       <stateContext.Provider value={state}>
         <TopBar
           state={state}
-          changeStateTrue={changeStateTrue}
-          changeStateFalse={changeStateFalse}
           changeState={changeState}
         />
         <Menu state={state} changeStateFalse={changeStateFalse} />

@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './TopBar.css'
 
-function TopBar( {state,changeStateTrue,changeStateFalse,changeState}) {
+function TopBar( {state,changeState}) {
   return (
       
       <div className={"top-bar " + (state && "active")}>
