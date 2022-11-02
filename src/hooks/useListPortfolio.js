@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const listPortfolio = [
+export const ListPortfolio = [
     {
         id: "featured",
         title: "Featured"
@@ -23,14 +23,16 @@ export const listPortfolio = [
     }
 ]
 
-export function useListPortfolio() {
-    const [porfolioList,setPorfolioList]=useState(listPortfolio);
-    return({porfolioList,setPorfolioList}) //Importante las llaves a la hora de retornar, ya sean funciones o variables.
+
+export function useListPortfolio(){
+    const [listPortfolio,setListPorfolio]=useState(ListPortfolio)
+    return(
+        {listPortfolio}
+    )
 }
 
-export function useStateList(listPortfolio){
-    const [selected,setSelected]=useState()
-    
-    return({selected,setSelected,})
+export function useChangeStateList(){
+    const [changeList,setChangeList]=useState()
+    return({changeList,setChangeList})
 }
 

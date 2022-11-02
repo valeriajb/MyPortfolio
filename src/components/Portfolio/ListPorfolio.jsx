@@ -1,13 +1,16 @@
 import React from "react";
 import "./ListPortfolio.css";
 
-function ListPorfolio({ id, title, stateActive, setSelected }) {
+function ListPorfolio({ id, title, stateList, setChangeList }) {
   return (
     <li
       className={
-        stateActive ? "item-menu-portfolio active" : "item-menu-portfolio"
-      }
-      onClick={() => setSelected(id)}
+        stateList ? "item-menu-portfolio active" : "item-menu-portfolio"
+      } 
+      onClick={() =>{
+        setChangeList(id)
+
+      } }
     >
       {title}
     </li>
