@@ -10,7 +10,16 @@ function FormContact() {
         <h2 className="form-title">Contacto</h2>
         <input type="email" className="email-form" placeholder="Tu correo" />
         <textarea  className="text-form" placeholder="Tu mensaje"></textarea>
-        <button onClick={changeState} className="button-form">Enviar</button>
+        <button onClick={
+            (e)=>{
+              e.preventDefault()
+              changeState()
+
+            }
+
+
+
+        } className="button-form">Enviar</button>
         <span className={'message-send '+(stateMessage && "active")}>Gracias, te responderé pronto</span>
       
       
