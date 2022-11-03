@@ -1,0 +1,52 @@
+.form-title {
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;
+}
+
+.container-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+}
+
+.email-form {
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.text-form {
+    margin-bottom: 50px;
+    padding: 10px 0;
+    height: 250px;
+    width: 100%;
+    resize: none;
+    /*  Para evitar que se pueda redimensionar
+ */
+}
+
+.button-form {
+    width: 50%;
+    padding: 10px 50px;
+    align-self: center;
+    background-color: #C83660;
+    border-style: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.message-send {
+    display: none;
+}
+
+.message-send.active {
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    color: green;
+    font-weight: 700;
+
+}

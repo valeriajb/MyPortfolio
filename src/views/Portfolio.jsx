@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDatePorfolio } from "../hooks/useDatesPorfolio";
-import Slider from '../components/Slider/Slider'
 import ListProjects from '../components/Portfolio/ListProjects'
 import {
   useListPortfolio,
@@ -8,7 +7,6 @@ import {
 } from "../hooks/useListPortfolio";
 import ListPortfolio from "../components/Portfolio/ListPorfolio";
 import "../components/Portfolio/Portfolio.css";
-
 function Portfolio() {
   const { listPortfolio } = useListPortfolio();
   const { changeList, setChangeList } = useChangeStateList();
@@ -22,7 +20,6 @@ function Portfolio() {
     setDatePorfolio,
   } = useDatePorfolio();
 
-  
   useEffect(() => {
     switch (changeList) {
       case "featured":
@@ -54,7 +51,6 @@ function Portfolio() {
 
   return (
     <div id="Portafolio" className="section-information">
-      <Slider/>
       <h1 className="title-portfolio">Portafolio</h1>
       <ul className="list-menu-portfolio">
         {listPortfolio.map((item) => (
