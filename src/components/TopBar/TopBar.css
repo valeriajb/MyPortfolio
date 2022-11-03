@@ -19,7 +19,7 @@
     font-size: 40px;
     font-weight:700 ;
     margin-left: 30px;
-    color:#241740;
+    color:#3A1F5D;
     text-decoration: none;
     transition: all 2s ease;
 
@@ -38,7 +38,7 @@
 .line{
     width: 100%;
     height: 3px;
-    background-color: #241740;
+    background-color: #3A1F5D;
     transform-origin: left;
     transition: all 2s ease;
 
@@ -48,7 +48,8 @@
 /* Active Elemets */
 
 .top-bar.active{
-    background-color:#241740;
+    background-color:#3A1F5D;
+    transition: all 2s ease;
 }
 .logo.active{
     color: white;
@@ -56,6 +57,7 @@
 .line-1.active{
     background-color: white;
     transform:rotate(45deg);
+    transition: all 2s ease;
 }
 .line-2.active{
     opacity: 0;
@@ -63,5 +65,5 @@
 .line-3.active{
     background-color: white;
     transform:rotate(-45deg);
-
+    transition: all 2s ease;
 }

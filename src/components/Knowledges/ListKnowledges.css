@@ -1,0 +1,34 @@
+.container-knowledge {
+  width: 220px;
+  height: 150px;
+  border-radius: 20px;
+  border: 1px solid #3A1F5D;
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.subtitle-knowledges {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+}
+.image-knowledges {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 1;
+}
+.container-knowledge:hover {
+  background-color: #C83660;
+  border: 2px solid #C83660;
+}
+.image-knowledges:hover {
+  opacity: 0.2;
+  z-index: 0;
+}

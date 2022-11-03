@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDatePorfolio } from "../hooks/useDatesPorfolio";
-
+import Slider from '../components/Slider/Slider'
+import ListProjects from '../components/Portfolio/ListProjects'
 import {
   useListPortfolio,
   useChangeStateList,
@@ -10,33 +11,50 @@ import "../components/Portfolio/Portfolio.css";
 
 function Portfolio() {
   const { listPortfolio } = useListPortfolio();
-  const { changeList, setChangeList } = useChangeStateList("featured");
-  const {featuredPortfolio,webPortfolio,mobilePortfolio,designPortfolio,contentPortfolio,datePortfolio,setDatePorfolio} = useDatePorfolio();
- 
+  const { changeList, setChangeList } = useChangeStateList();
+  const {
+    featuredPortfolio,
+    webPortfolio,
+    mobilePortfolio,
+    designPortfolio,
+    contentPortfolio,
+    datePortfolio,
+    setDatePorfolio,
+  } = useDatePorfolio();
+
+  
   useEffect(() => {
     switch (changeList) {
       case "featured":
         setDatePorfolio(featuredPortfolio);
+
         break;
       case "webApp":
         setDatePorfolio(webPortfolio);
+
         break;
       case "mobileapp":
         setDatePorfolio(mobilePortfolio);
+
         break;
       case "design":
         setDatePorfolio(designPortfolio);
+
         break;
       case "content":
         setDatePorfolio(contentPortfolio);
-        break;
-      default: setDatePorfolio(featuredPortfolio);
-      break;
 
+        break;
+      default:
+        setDatePorfolio(featuredPortfolio);
+
+        break;
     }
   }, [changeList]);
+
   return (
     <div id="Portafolio" className="section-information">
+      <Slider/>
       <h1 className="title-portfolio">Portafolio</h1>
       <ul className="list-menu-portfolio">
         {listPortfolio.map((item) => (
@@ -49,11 +67,8 @@ function Portfolio() {
         ))}
       </ul>
       <div className="container-projects">
-        {datePortfolio.map((d) => (
-          <div className="container-project">
-            <img className="image-project" src={d.img}></img>
-            <h3 className="subtitle-project">{d.title}</h3>
-          </div>
+        {datePortfolio.map((date) => (
+          <ListProjects date={date}/>
         ))}
       </div>
     </div>

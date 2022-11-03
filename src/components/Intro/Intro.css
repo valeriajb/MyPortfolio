@@ -7,7 +7,7 @@
 .img-container{
     width: 500px;
     height: 500px;
-    background-color: #dd143d;
+    background-color: #C83660;
     border-radius: 50%;
     display: flex;
     align-items: flex-end;
@@ -27,7 +27,7 @@
     font-weight: 600;
 }
 .title-name{
-    font-size:60px;
+    font-size:50px;
     margin: 15px 0;
 }
 .text-ocupation{
@@ -35,7 +35,7 @@
     font-weight: 600;
 }
 .span-development{
-    color:#dd143d;
+    color:#C83660;
 }
 .next-page{
     position: absolute;

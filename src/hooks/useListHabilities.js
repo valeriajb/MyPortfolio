@@ -36,8 +36,8 @@ export const habilitiesArray = [
   ];
   
 export function useListHabilities() {
-    const[habilities,setHabilities]=useState([habilitiesArray])
-    return(habilities)
+    const[habilities,setHabilities]=useState(habilitiesArray)
+    return({habilities})
 }
 
 
