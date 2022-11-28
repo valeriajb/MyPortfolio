@@ -32,3 +32,18 @@
   opacity: 0.2;
   z-index: 0;
 }
+
+@media screen and (max-width: 750px){
+  .container-knowledge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .image-knowledges {
+    width: 50%;
+  }
+  
+}

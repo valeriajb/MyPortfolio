@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import next from "../../assets/Img/next.png";
-import PersonIntro from "../../assets/Img/PersonIntro.png";
+import { Link } from "react-router-dom";
 import { init } from "ityped";
 import "./Intro.css";
 import "../../App.css";
@@ -10,8 +9,8 @@ function Intro() {
   useEffect(() => {
     init(textRef.current, {
       showCursor: false,
-      backDelay:1500,
-      backSpeed:60,
+      backDelay: 1500,
+      backSpeed: 60,
       strings: ["Web", "Escritorio"],
     });
   }, []);
@@ -22,7 +21,7 @@ function Intro() {
         <div className="intro-left">
           <div className="img-container">
             <img
-              src={PersonIntro}
+              src="/assets/Img/PersonIntro.png"
               alt="Imagen Valeria"
               className="img-person"
             />
@@ -35,8 +34,8 @@ function Intro() {
             Desarrolladora{" "}
             <span className="span-development" ref={textRef}></span>
           </h3>
-          <a href="#" className="next-page">
-            <img src={next} alt="" className="img-next" />
+          <a href="/habilidades" className="next-page">
+            <img src="/assets/Img/next.png" alt="" className="img-next" />
           </a>
         </div>
       </div>
